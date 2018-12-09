@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+import bisect
+import json
+
+
+with open('box_str.log', 'r') as f1:
+    list1 = f1.readlines()
+
+total=0
+big=0
+for i in list1:
+   total+=1
+   tmp = eval(i)
+   for t in tmp:
+     batteryStr = t["battery"]
+     b=int(batteryStr)
+     if(b>4100):
+       big+=1
+       continue
+       print(b)
+
+print(total)
+print(big)
+
+print("Hello, World!")
